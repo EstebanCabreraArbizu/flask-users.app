@@ -1,0 +1,75 @@
+<!-- {% extends 'layout.html' %}
+{% block body %} -->
+
+<!-- <div class="row">
+    <div class="col-md-5"> -->
+        {% with messages = get_flashed_messages() %} 
+        {% if messages%} 
+        {% for message in messages %}
+        
+        <!-- <div class="alert alert-success alert-dismissible fade show" role="alert"> -->
+            {{message}}
+            <!-- <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div> -->
+
+        {% endfor%}
+        {% endif%}
+        {% endwith %}
+        <!-- <div class="card card-body"> -->
+        <form action="/add_user" method="POST">
+            <!-- <div class="form-group"> -->
+                <input type="text" name="nombre" placeholder="Nombre"  />
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+                <input type="text" name="apellido" placeholder="Apellido"  />
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+                <input type="text" name="correo" placeholder="Correo"  />
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+                <input type="text" name="contrasenia" placeholder="Contraseña"  />
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+                <input type="text" name="nickname" placeholder="nickname"  />
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+                <button type="submit">Save</button>
+            <!-- </div> -->
+        </form>
+        <!-- </div>
+    </div>
+    <div class="col-md-7"> -->
+        <table >
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Correo</td>
+                    <td>Contraseña</td>
+                    <td>nickname</td>
+                    <td>Nombre de la comunidad</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario.1}}</td>
+                    <td>{{ usuario.2}}</td>
+                    <td>{{ usuario.3}}</td>
+                    <td>{{ usuario.4}}</td>
+                    <td>{{ usuario.5}}</td>
+                    <td>{{ usuario.6}}</td>
+                    <td>
+                        <a href="/edit/{{usuario.0}}" >Edit</a>
+                        <a href="/delete/{{usuario.0}}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <!-- </div>
+</div> -->
+
+<!-- {% endblock %} -->
