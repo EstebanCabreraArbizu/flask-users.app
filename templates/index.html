@@ -1,8 +1,31 @@
-<!-- {% extends 'layout.html' %}
-{% block body %} -->
-
-<!-- <div class="row">
-    <div class="col-md-5"> -->
+<!DOCTYPE html><html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <title>Registro
+        </title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <script type=module src=main.js></script>
+    
+    </head>
+    <body>  
+        <div class="top_bar">
+            <div class="fotito1">
+                <a href="#"><img src="Imagenes/logo.jpg" alt="up"></a>
+              </div>
+        </div>
+        <div class="lowbar">
+            <div class="lowbar_bk"></div>
+            <span class="copyr">ProGrades</span>
+        </div>
+        <div class="block1">
         {% with messages = get_flashed_messages() %} 
         {% if messages%} 
         {% for message in messages %}
@@ -17,6 +40,7 @@
         {% endfor%}
         {% endif%}
         {% endwith %}
+    </div>  
         <!-- <div class="card card-body"> -->
         <form action="/add_user" method="POST">
             <!-- <div class="form-group"> -->
@@ -41,7 +65,9 @@
         <!-- </div>
     </div>
     <div class="col-md-7"> -->
-        <table >
+        <div class="block">
+        <table >  
+           
             <thead>
                 <tr>
                     <td>Nombre</td>
@@ -69,7 +95,107 @@
                 {% endfor %}
             </tbody>
         </table>
-    <!-- </div>
-</div> -->
+    </div>
 
-<!-- {% endblock %} -->
+   
+      
+
+    </body>
+</html>
+<style>
+.fotito1 img {
+    position: absolute;
+    width: 71px;
+    height: 43px;
+    left: 12px;
+    top: 11px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background:url("Imagenes/fondo2.jpg");
+    text-align: center;
+    padding: 214px 871px;
+    top: 687px;
+    left: 921px;
+    width: 399px;
+    height: 84px;
+}
+body {
+    background: #2980b9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c3e50,
+      #2980b9
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2c3e50,
+      #2980b9
+    ); /* W3C, IE 10+/ Ed
+    ge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .block {
+    width: 2073px;
+    height: 448px;
+    background: #ED6335;
+    opacity: 1;
+    position: absolute;
+    top: 421px;
+    left: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+.block1 {
+    width: 2141px;
+    height: 35px;
+    background: #ED6335;
+    opacity: 1;
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+.top_bar {
+    width: 100%;
+    height: 68px;
+    background: #026D81;
+    opacity: 1;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    overflow: hidden;
+}
+.lowbar {
+    width: 100%;
+    height: 68px;
+    background: #026D81;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 868px;
+    left: 0px;
+    overflow: hidden;
+}
+.copyr {
+    width: 313px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 22px;
+    left: 19px;
+    font-family: Roboto Mono;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+</style>
